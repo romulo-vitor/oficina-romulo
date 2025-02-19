@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="renato.png">
+    <link rel="stylesheet" href="renato gacia.jpg">
+    <link rel="stylesheet" href="leo da hornet.jpg">
+    <link rel="stylesheet" href="renan fiorini.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Renato Garcia - Serviços</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-navy': '#0a192f',
+                        'navy': '#112240',
+                        'light-navy': '#1a365d',
+                        'accent-blue': '#3b82f6',
+                        'text-white': '#e6f1ff',
+                        'text-light': '#94a3b8',
+                        'text-dark': '#0f172a',
+                    },
+                    maxWidth: {
+                        'custom': '1200px',
+                    },
+                    boxShadow: {
+                        'custom': '0 5px 15px rgba(0, 0, 0, 0.3)',
+                        'custom-dark': '0 5px 15px rgba(0, 0, 0, 0.5)',
+                    },
+                    keyframes: {
+                        fadeInLeft: {
+                            'from': { 
+                                opacity: '0',
+                                transform: 'translateX(-50px)'
+                            },
+                            'to': { 
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            },
+                        },
+                        fadeInRight: {
+                            'from': { 
+                                opacity: '0',
+                                transform: 'translateX(50px)'
+                            },
+                            'to': { 
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeInUp: {
+                            'from': { 
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+                            'to': { 
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        rotateY: {
+                            'to': { 
+                                transform: 'rotateY(360deg)'
+                            }
+                        }
+                    },
+                    animation: {
+                        fadeInLeft: 'fadeInLeft 1s ease-out',
+                        fadeInRight: 'fadeInRight 1s ease-out',
+                        float: 'float 6s ease-in-out infinite',
+                        fadeInUp: 'fadeInUp 0.8s ease-out forwards',
+                        rotateY: 'rotateY 1s ease'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Barra superior com informações de contato -->
+    <div class="bg-text-dark text-text-white py-2">
+        <div class="max-w-custom mx-auto px-5 flex justify-between">
+            <div class="contact-phone">📞 Contato : +01 123455678990</div>
+            <div class="contact-email">📧 Email : renatogarcia@gmail.com</div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho principal com logo e navegação -->
+    <header class="bg-dark-navy py-4">
+        <div class="max-w-custom mx-auto px-5 flex justify-between items-center">
+            <div class="text-2xl font-bold text-accent-blue">GBRM</div>
+            <nav class="flex gap-8">
+                <a href="#home" class="text-text-white font-medium hover:text-accent-blue transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-accent-blue after:left-0 after:bottom-[-5px] after:transition-all after:duration-300 hover:after:w-full">casa</a>
+                <a href="#sobre" class="text-text-white font-medium hover:text-accent-blue transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-accent-blue after:left-0 after:bottom-[-5px] after:transition-all after:duration-300 hover:after:w-full">sobre</a>
+                <a href="#servicos" class="text-text-white font-medium hover:text-accent-blue transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-accent-blue after:left-0 after:bottom-[-5px] after:transition-all after:duration-300 hover:after:w-full">Serviços</a>
+                <a href="#contato" class="text-text-white font-medium hover:text-accent-blue transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-accent-blue after:left-0 after:bottom-[-5px] after:transition-all after:duration-300 hover:after:w-full">pra contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <button class="mobile-menu-btn md:hidden">
+        <i class="fas fa-bars text-2xl text-text-white"></i>
+    </button>
+
+    <div class="mobile-menu hidden fixed top-0 left-0 w-full h-full bg-dark-navy/95 z-50">
+        <button class="close-menu absolute top-5 right-5 text-text-white text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="flex flex-col items-center justify-center h-full gap-8">
+            <a href="#home" class="text-text-white text-xl hover:text-accent-blue transition-colors duration-300">casa</a>
+            <a href="#sobre" class="text-text-white text-xl hover:text-accent-blue transition-colors duration-300">sobre</a>
+            <a href="#servicos" class="text-text-white text-xl hover:text-accent-blue transition-colors duration-300">Serviços</a>
+            <a href="#contato" class="text-text-white text-xl hover:text-accent-blue transition-colors duration-300">pra contato</a>
+        </nav>
+    </div>
+
+    <!-- Seção Hero -->
+    <section id="home" class="bg-dark-navy py-12 min-h-[500px] bg-gradient-to-r from-dark-navy from-60% to-navy">
+        <div class="max-w-custom mx-auto px-5 flex justify-between items-center gap-12">
+            <div class="flex-1 animate-[fadeInLeft_1s_ease-out]">
+                <h1 class="text-text-white text-4xl mb-5 font-bold">Serviços de Reparo e Manutenção</h1>
+                <button class="bg-accent-blue text-text-white px-8 py-4 font-bold rounded hover:bg-[#2563eb] transition-colors duration-300 relative overflow-hidden group">
+                    <span class="relative z-10">contrate-nos</span>
+                    <div class="absolute top-1/2 left-1/2 w-0 h-0 bg-white/20 rounded-full -translate-x-1/2 -translate-y-1/2 group-hover:w-[300px] group-hover:h-[300px] transition-all duration-600"></div>
+                </button>
+            </div>
+            <div class="flex-1 text-right animate-[fadeInRight_1s_ease-out]">
+                <img src="renato.png" alt="Renato Garcia na moto" class="max-w-full h-auto rounded-lg shadow-custom animate-[float_6s_ease-in-out_infinite]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="bg-navy py-20 w-full relative overflow-hidden">
+        <div class="max-w-custom mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+                <!-- Card 1 -->
+                <div class="flex-1 text-center opacity-0 animate-fadeInUp [animation-delay:200ms] group">
+                    <div class="p-8 bg-light-navy rounded-lg shadow-custom-dark transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <!-- Linha gradiente no topo -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-blue to-[#ff6b00]"></div>
+                        
+                        <div class="w-20 h-20 mx-auto mb-5 bg-accent-blue/10 rounded-full flex items-center justify-center group-hover:animate-rotateY">
+                            <i class="fas fa-tools text-4xl text-accent-blue"></i>
+                        </div>
+                        <h3 class="text-text-white text-2xl mb-4 font-bold">reparar</h3>
+                        <p class="text-text-light leading-relaxed">Serviços especializados de reparo para sua motocicleta, garantindo o melhor desempenho e segurança.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex-1 text-center opacity-0 animate-fadeInUp [animation-delay:400ms] group">
+                    <div class="p-8 bg-[#ff6b00] rounded-lg shadow-custom-dark transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <!-- Linha gradiente no topo -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-white to-white/50"></div>
+                        
+                        <div class="w-20 h-20 mx-auto mb-5 bg-white/10 rounded-full flex items-center justify-center group-hover:animate-rotateY">
+                            <i class="fas fa-home text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-white text-2xl mb-4 font-bold">melhorar</h3>
+                        <p class="text-white leading-relaxed">Melhorias e customizações para deixar sua moto com sua personalidade e maior performance.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex-1 text-center opacity-0 animate-fadeInUp [animation-delay:600ms] group">
+                    <div class="p-8 bg-light-navy rounded-lg shadow-custom-dark transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <!-- Linha gradiente no topo -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-blue to-[#ff6b00]"></div>
+                        
+                        <div class="w-20 h-20 mx-auto mb-5 bg-accent-blue/10 rounded-full flex items-center justify-center group-hover:animate-rotateY">
+                            <i class="fas fa-house text-4xl text-accent-blue"></i>
+                        </div>
+                        <h3 class="text-text-white text-2xl mb-4 font-bold">manter</h3>
+                        <p class="text-text-light leading-relaxed">Manutenção preventiva e regular para manter sua moto sempre em perfeitas condições.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Após a seção de serviços -->
+    <section id="sobre" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>SOBRE NÓS</h2>
+                <p>Existem muitas variações de passagens do Lorem Ipsum disponíveis, mas a maioria sofreu alguma alteração, por meio de humor injetado ou randomizado. Existem muitas variações de passagens do Lorem Ipsum disponíveis, mas a maioria sofreu alguma alteração, por meio de humor injetado ou randomizado.</p>
+                <button class="read-more-button">LER MAIS</button>
+            </div>
+            <div class="about-image">
+                <img src="renato gacia.jpg" alt="Mecânico com avental">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Oferta de Serviços -->
+    <section class="offer">
+        <div class="offer-container">
+            <div class="offer-content">
+                <h2>OFERECEMOS</h2>
+                <h3>SERVIÇOS PROFISSIONAIS PARA RESIDÊNCIAS.</h3>
+                <p>Oferecemos serviços profissionais especializados para residências, com o compromisso de garantir conforto, segurança e praticidade para o seu lar. Nossa equipe é formada por profissionais qualificados, prontos para atender às suas necessidades de forma eficiente e personalizada. Trabalhamos com diversos tipos de serviços, como reparos, instalações, manutenções preventivas e até projetos de melhorias, sempre com foco na qualidade e no bom atendimento.
+
+                    Seja para pequenos consertos ou grandes reformas, nossa missão é proporcionar soluções que tragam bem-estar e valorizem o ambiente da sua residência. Priorizamos a pontualidade, a transparência e a excelência em cada serviço, garantindo que você tenha uma experiência tranquila e satisfatória.
+                    
+                    Conte conosco para transformar sua casa com serviços feitos sob medida para você. Nossa dedicação é oferecer o melhor, sempre respeitando seu tempo, seu orçamento e suas expectativas.</p>
+                <button class="offer-button">LER MAIS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Nossos Serviços -->
+    <section class="our-services">
+        <h2 class="section-title">NOSSOS SERVIÇOS</h2>
+        
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3>Manutenção</h3>
+                <p>ao olhar para seu layout. O objetivo de usar Lorem Ipsum é que ele tem um layout mais ou menos normal</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Elétrico</h3>
+                <p>ao olhar para seu layout. O objetivo de usar Lorem Ipsum é que ele tem um layout mais ou menos normal</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-faucet"></i>
+                </div>
+                <h3>Encanamento</h3>
+                <p>ao olhar para seu layout. O objetivo de usar Lorem Ipsum é que ele tem um layout mais ou menos normal</p>
+            </div>
+        </div>
+
+        <button class="ver-mais">VER MAIS</button>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials">
+        <h2 class="section-title">O QUE NOSSOS CLIENTES DIZEM</h2>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <img src="renan fiorini.jpg" alt="Cliente com colete tático" class="client-image">
+                    <div class="client-details">
+                        <h3>Renan Fiorini</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">O atendimento foi excelente, a equipe foi super atenciosa e resolveu meu problema rapidamente.
+                <span class="quote-mark">"</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <img src="leo da hornet.jpg" alt="Cliente com moletom" class="client-image">
+                    <div class="client-details">
+                        <h3>Leo da Hornet</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">A moto ficou como nova depois da troca de óleo e ajustes no motor. O preço foi justo e o serviço foi feito dentro do prazo</p>
+                <span class="quote-mark">"</span>
+            </div>
+        </div>
+
+        <div class="testimonial-controls">
+            <button class="control-btn prev"><i class="fas fa-arrow-left"></i></button>
+            <button class="control-btn next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact-section">
+        <h2 class="section-title">CONTRATE-NOS</h2>
+        
+        <div class="contact-container">
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="telefone" name="telefone" placeholder="Número de telefone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">ENVIAR</button>
+                </form>
+            </div>
+            
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975829726973!2d-46.6521903!3d-23.5645229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUyLjMiUyA0NsKwMzknMDcuOSJX!5e0!3m2!1spt-BR!2sbr!4v1625161234567!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Após a seção de contato, antes do fechamento do body -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Entre em contato</h2>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rua dos bobos, nº 0</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+02 1234567890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>renatogarcia@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h2>nos siga</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-line"></div>
+            <p>&copy; 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu móvel
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Fechar menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+</body>
+</html>
